@@ -31,18 +31,18 @@ export const TruthTableInput = ({ rows, onRowsChange }: TruthTableInputProps) =>
   };
 
   return (
-    <Card className="p-6 bg-card border-border">
+    <Card className="p-6 bg-card border-[hsl(var(--table-border))]">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-2xl font-bold text-foreground">Truth Table</h3>
-          <p className="text-sm text-muted-foreground mt-1">
+          <h3 className="text-2xl font-bold text-[hsl(var(--table-header))]">Truth Table</h3>
+          <p className="text-sm text-[hsl(var(--table-label))] mt-1">
             Enter your circuit inputs and compare expected vs observed outputs
           </p>
         </div>
         <Button 
           onClick={addRow}
           size="sm"
-          className="bg-primary hover:bg-primary/90"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground"
         >
           <Plus className="w-4 h-4 mr-2" />
           Add Row
@@ -51,10 +51,10 @@ export const TruthTableInput = ({ rows, onRowsChange }: TruthTableInputProps) =>
 
       <div className="space-y-4">
         {/* Header */}
-        <div className="grid grid-cols-[2fr_1fr_1fr_auto] gap-4 pb-2 border-b border-border">
-          <Label className="text-xs text-muted-foreground uppercase tracking-wider">Inputs (e.g., 00, 01)</Label>
-          <Label className="text-xs text-muted-foreground uppercase tracking-wider">Expected Output</Label>
-          <Label className="text-xs text-muted-foreground uppercase tracking-wider">Observed Output</Label>
+        <div className="grid grid-cols-[2fr_1fr_1fr_auto] gap-4 pb-3 border-b-2 border-[hsl(var(--table-border))]">
+          <Label className="text-sm font-semibold text-[hsl(var(--table-label))] uppercase tracking-wider">Inputs (e.g., 00, 01)</Label>
+          <Label className="text-sm font-semibold text-[hsl(var(--table-label))] uppercase tracking-wider">Expected</Label>
+          <Label className="text-sm font-semibold text-[hsl(var(--table-label))] uppercase tracking-wider">Observed</Label>
           <div className="w-10"></div>
         </div>
 
@@ -65,23 +65,23 @@ export const TruthTableInput = ({ rows, onRowsChange }: TruthTableInputProps) =>
               value={row.inputs}
               onChange={(e) => updateRow(index, "inputs", e.target.value)}
               placeholder="e.g., 00, 01, 10, 11"
-              className="font-mono bg-code-bg border-border focus:border-primary"
+              className="font-mono text-base bg-[hsl(var(--table-input-bg))] border-[hsl(var(--table-border))] focus:border-primary text-[hsl(var(--table-header))]"
             />
             <Input
               value={row.expectedOutput}
               onChange={(e) => updateRow(index, "expectedOutput", e.target.value)}
               placeholder="0 or 1"
-              className="font-mono bg-code-bg border-border focus:border-primary"
+              className="font-mono text-base bg-[hsl(var(--table-input-bg))] border-[hsl(var(--table-border))] focus:border-primary text-[hsl(var(--table-header))]"
               maxLength={1}
             />
             <Input
               value={row.observedOutput}
               onChange={(e) => updateRow(index, "observedOutput", e.target.value)}
               placeholder="0 or 1"
-              className={`font-mono bg-code-bg border-border focus:border-primary ${
+              className={`font-mono text-base bg-[hsl(var(--table-input-bg))] border-2 focus:border-primary text-[hsl(var(--table-header))] ${
                 row.expectedOutput && row.observedOutput && row.expectedOutput !== row.observedOutput
                   ? "border-destructive"
-                  : ""
+                  : "border-[hsl(var(--table-border))]"
               }`}
               maxLength={1}
             />
@@ -97,7 +97,7 @@ export const TruthTableInput = ({ rows, onRowsChange }: TruthTableInputProps) =>
         ))}
 
         {rows.length === 0 && (
-          <div className="text-center py-12 text-muted-foreground">
+          <div className="text-center py-12 text-[hsl(var(--table-label))]">
             No rows yet. Click "Add Row" to get started.
           </div>
         )}

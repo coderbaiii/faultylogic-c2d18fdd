@@ -41,7 +41,13 @@ All colors MUST be HSL.
     /* Circuit-themed custom properties */
     --circuit-glow: 192 91% 55%;
     --circuit-trace: 220 20% 20%;
-    --code-bg: 220 25% 10%;
+    --code-bg: 220 20% 14%;
+    
+    /* Truth table colors */
+    --table-header: 180 100% 95%;
+    --table-label: 192 70% 70%;
+    --table-input-bg: 220 20% 16%;
+    --table-border: 192 40% 35%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(192 91% 55%), hsl(192 91% 45%));
