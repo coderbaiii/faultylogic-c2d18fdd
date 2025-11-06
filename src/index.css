@@ -17,8 +17,8 @@ All colors MUST be HSL.
     --popover: 220 25% 10%;
     --popover-foreground: 180 100% 90%;
 
-    --primary: 192 91% 55%;
-    --primary-foreground: 220 27% 6%;
+    --primary: 330 81% 60%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 220 20% 15%;
     --secondary-foreground: 180 100% 90%;
@@ -26,36 +26,36 @@ All colors MUST be HSL.
     --muted: 220 20% 12%;
     --muted-foreground: 180 20% 60%;
 
-    --accent: 192 91% 55%;
-    --accent-foreground: 220 27% 6%;
+    --accent: 330 81% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 20% 18%;
     --input: 220 20% 18%;
-    --ring: 192 91% 55%;
+    --ring: 330 81% 60%;
 
     --radius: 0.5rem;
 
     /* Circuit-themed custom properties */
-    --circuit-glow: 192 91% 55%;
+    --circuit-glow: 330 81% 60%;
     --circuit-trace: 220 20% 20%;
     --code-bg: 220 20% 14%;
     
     /* Truth table colors */
-    --table-header: 180 100% 95%;
-    --table-label: 192 70% 70%;
+    --table-header: 0 0% 100%;
+    --table-label: 330 70% 75%;
     --table-input-bg: 220 20% 16%;
-    --table-border: 192 40% 35%;
+    --table-border: 330 40% 45%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(192 91% 55%), hsl(192 91% 45%));
+    --gradient-primary: linear-gradient(135deg, hsl(330 81% 60%), hsl(330 81% 50%));
     --gradient-circuit: linear-gradient(180deg, hsl(220 27% 6%), hsl(220 25% 10%));
     
     /* Shadows */
-    --shadow-glow: 0 0 30px hsl(192 91% 55% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(192 91% 55% / 0.2);
+    --shadow-glow: 0 0 30px hsl(330 81% 60% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(330 81% 60% / 0.2);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
